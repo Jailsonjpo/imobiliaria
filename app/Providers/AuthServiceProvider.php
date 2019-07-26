@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
-//use App\Permissao;
+use App\Permissao;
 
 
 class AuthServiceProvider extends ServiceProvider
@@ -48,7 +48,7 @@ class AuthServiceProvider extends ServiceProvider
     
     public function getPermissoes(){
         
-//        return Permissao::with('papeis')->get();
+        return Permissao::with('papeis')->get();
         
     }
 }
